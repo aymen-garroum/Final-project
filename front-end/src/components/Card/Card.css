@@ -1,0 +1,47 @@
+.div_card{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 23%;
+    border-radius: 3px;
+}
+
+.footer_card {
+    display:flex;
+    flex-direction: column;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.img_card {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.button_info{
+    background-color: grey;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    font-size: 15px;
+    display: table;
+    margin-left: 60%;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.product_name {
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 2%;
+}
+
+.button_info:hover{
+    background-color:rgb(65, 65, 65);
+}

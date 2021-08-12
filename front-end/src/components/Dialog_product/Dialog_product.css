@@ -1,0 +1,15 @@
+.dialog_box {
+    width: 30%;
+    position:absolute;
+    top: 15%;
+    left: 50%;
+}
+
+.div_form_dialog {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    justify-content: space-between;
+    /* width: 60%; */
+    margin-bottom: 2%;
+}

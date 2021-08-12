@@ -1,0 +1,62 @@
+.section_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.coordonnees {
+    margin-top: 0%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #6d747c;
+    font-family: 'Raleway', sans-serif;
+}
+
+.div_coordonnees {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.div_contact {
+    padding: 1%;
+    width : 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #6d747c;
+    border-radius: 5px;
+}
+
+.div_infos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.div_infos input {
+    border: solid 1px;
+    border-radius: 2px;
+    height: 30px;
+}
+
+.msg_envoyer {
+    width: 13%;
+    padding: 1%;
+    background-color: grey;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    text-align: center;
+    color: white;
+}
+
+.msg_envoyer:hover {
+    background-color:rgb(65, 65, 65);
+}

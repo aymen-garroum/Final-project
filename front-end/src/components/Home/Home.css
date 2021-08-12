@@ -1,0 +1,92 @@
+.div_home {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+.each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+
+.slide {
+    width: 50%;
+    margin-bottom: 2%;
+  }
+
+.bande {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(90, 70, 70);
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+  letter-spacing: 2px;
+  text-decoration: overline;
+}
+
+.presentation {
+  width: 50%;
+  text-align: justify;
+  margin-bottom: 3%;
+  color: #6d747c;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 30px;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.div_contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+.card_valeurs {
+  color: #6d747c;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.card_ref {
+  color: #6d747c;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 1%;
+}
+
+

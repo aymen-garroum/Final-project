@@ -1,0 +1,23 @@
+.div_admin {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.div_form_admin {
+    width:20%;
+    /* border:1px solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+.btn_div_admin {
+    /* width: 13%; */
+    padding: 1%;
+    background-color: grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
