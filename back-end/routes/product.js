@@ -11,9 +11,9 @@ router.get('/produits', (req,res)=> {
 
 router.post('/data_manage', async(req,res) => {
     try{let new_product = await new Product({nom: req.body.nom,
-        descriptif: req.body.descriptif})
-        // image: req.body.image.data,
-        // fiche: req.body.fiche.data})
+        descriptif: req.body.descriptif,
+        image: {nom: req.body.image.nom, data: req.body.image.data},
+        fiche: {nom: req.body.fiche.nom, data: req.body.fiche.data}})
 
         await new_product.save((err,docs)=>{
             res.send("Produit ajouté avec succès")

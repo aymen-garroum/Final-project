@@ -8,15 +8,39 @@ function DialogProduct() {
 
     const [nom, SetNom] = useState("");
     const [desc, SetDesc] = useState("");
-    const [imgPath, SetImgPath] = useState("");
-    const [fichePath, SetFichePath] = useState("");
+    const [imgFile, SetImgFile] = useState({nom:"",data:""});
+    const [ficheFile, SetFicheFile] = useState({nom:"",data:""});
 
     const dispatch = useDispatch()
 
+    const update_fiche = (e) => {
+
+        const name = e.target.files[0].name
+
+        let reader = new FileReader();
+
+        reader.readAsDataURL(e.target.files[0]);
+
+        reader.onload = (e) => {SetFicheFile({nom: name, data: e.target.result})}
+
+    }
+
+    const update_img = (e) =>{
+
+        const name = e.target.files[0].name
+
+        let reader = new FileReader();
+
+        reader.readAsDataURL(e.target.files[0]);
+
+        reader.onload = (e) => {SetImgFile({nom: name, data: e.target.result})}
+
+    }
+
     const ajouter_produit = () =>{
-        // const produit = {nom: nom, description: desc, image: imgPath[0], fiche: fichePath[0]}
-        const produit = {nom: nom, descriptif: desc}
-        console.log(produit)
+
+        const produit = {nom: nom, descriptif: desc, image: imgFile, fiche: ficheFile}
+
         dispatch(add_product(produit))
     }
 
@@ -35,12 +59,12 @@ function DialogProduct() {
 
             <div className="div_form_dialog">
                 <label>Image</label>
-                <input onChange={(e)=>{SetImgPath(e.target.files)}} type="file" accept="image/*"/>
+                <input onChange={(e)=>{update_img(e)}} type="file" accept="image/*"/>
             </div>
 
             <div className="div_form_dialog">
                 <label>Fiche technique</label>
-                <input onChange={(e)=>{SetFichePath(e.target.files)}} type="file" accept=".pdf"/>
+                <input onChange={(e)=>{update_fiche(e)}} type="file" accept=".pdf"/>
             </div>
 
             <button onClick={()=>{ajouter_produit()}}>Ajouter</button>

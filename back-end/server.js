@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8000
 
 const connectDB = require('./config/connectDB')
 
-app.use(express.json())
+app.use(express.json({ limit: '2MB' }))
 
 app.use(require('./routes/product'))
 
