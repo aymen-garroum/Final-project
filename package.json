@@ -2,9 +2,9 @@
   "name": "Final-Project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "cd back-end && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "front": "cd front-end && npm start",
     "back" : "cd back-end && nodemon server.js",
