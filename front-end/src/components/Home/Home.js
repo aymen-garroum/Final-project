@@ -55,15 +55,15 @@ function Home() {
             <div className="div_contents">
                 <div className="card_valeurs">
                     <h1>Confiance</h1>
-                    <img style={{width:"20%", border:"10px solid", borderRadius:"5px"}} src={img_confiance} alt="Error"/>
+                    <img className="img_valeurs" src={img_confiance} alt="Error"/>
                 </div>
                 <div className="card_valeurs">
                     <h1>Responsabilité</h1>
-                    <img style={{width:"20%", border:"10px solid", borderRadius:"5px"}} src={img_respons} alt="Error"/>
+                    <img className="img_valeurs" src={img_respons} alt="Error"/>
                 </div>
                 <div className="card_valeurs">
                     <h1>Qualité</h1>
-                    <img style={{width:"20%", border:"10px solid", borderRadius:"5px"}} src={img_qualite} alt="Error"/>
+                    <img className="img_valeurs" src={img_qualite} alt="Error"/>
                 </div>
             </div>
 

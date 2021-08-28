@@ -1,10 +1,16 @@
 import React from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
+import {useState} from 'react'
 
 function Header() {
+
+    const [show, Setshow] = useState(false)
+
     return (
         <div className="div_header">
+
+            <div className="div_logo_menu">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 160 160">
                 <g>
@@ -22,11 +28,16 @@ function Header() {
                     <path strokeWidth="0.901" d="M-169.549 126.701H-110.45000000000002V140.79999999999998H-169.549z" transform="rotate(-90)"></path></g></g>
                 </g>
             </svg>
-            <ul className="liste_menu">
-                <Link className="header_links" to="/"><li>Accueil</li></Link>
-                <Link className="header_links" to="/produits"><li>Produits</li></Link>
-                <Link className="header_links" to="/contact"><li>Contact</li></Link>
-            </ul>
+
+            <span onClick={() => Setshow(!show)} className="menu_icon">≡</span>
+
+            </div>
+
+            <div className={show ? "liste_menu_responsive": "liste_menu"}>
+                <Link className="header_links" to="/">Accueil</Link>
+                <Link className="header_links" to="/produits">Produits</Link>
+                <Link className="header_links" to="/contact">Contact</Link>
+            </div>
         </div>
     )
 }

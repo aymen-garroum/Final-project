@@ -5,6 +5,7 @@
     color: white;
     width: 23%;
     border-radius: 3px;
+    margin-bottom: 3%;
 }
 
 .footer_card {
@@ -32,6 +33,8 @@
     margin-left: 60%;
     text-align: center;
     transition-duration: 0.4s;
+    text-decoration: none;
+    color: inherit;
 }
 
 .product_name {
@@ -44,4 +47,18 @@
 
 .button_info:hover{
     background-color:rgb(65, 65, 65);
+}
+
+@media only screen and (max-width: 800px) {
+    .div_card {
+        width: 100%;
+    }
+
+    .product_name {
+        font-size: 80%;
+    }
+
+    .button_info {
+        font-size: 80%;
+    }
 }

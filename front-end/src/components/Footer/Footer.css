@@ -18,3 +18,19 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media only screen and (max-width: 800px) {
+
+    .div_footer {
+        align-items: center;
+    }
+
+    .footer_infos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div_footer {
+        font-size: 80%;
+    }
+}

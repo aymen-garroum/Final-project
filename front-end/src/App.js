@@ -6,6 +6,7 @@ import Card from './components/Card/Card'
 import Contact from './components/Contact/Contact'
 import Auth from './components/Auth/Auth'
 import Data_manage from './components/Data_manage/Data_manage'
+import Produit from './components/Produit/Produit'
 import {Route} from 'react-router-dom'
 import {useEffect} from 'react'
 import {get_products} from './JS/actions/product_actions'
@@ -28,7 +29,8 @@ function App() {
       <Header/>
       <Route exact path="/" render={Home}/>
       <Route exact path="/contact" render={Contact}/>
-      <Route exact path="/produits" render={()=> (<div className="products_list">{products_data.map((el,index) => (<Card key={el._id} product={el}/>))}</div>)}/>
+      <Route exact path="/produits" render={()=> (<div className="products_list">{products_data.map((el) => (<Card key={el._id} product={el}/>))}</div>)}/>
+      <Route exact path="/produits/:id_produit" render={(props) => <Produit produit={props}/>}/>
       <Route exact path="/auth" render={Auth}/>
       <Route exact path="/data_manage" component={Data_manage}/>
       <Footer/>
