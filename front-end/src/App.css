@@ -2,8 +2,6 @@
   margin-left: 10%;
   width: 80%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 3%;
 }
 

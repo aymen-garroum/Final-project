@@ -42,6 +42,11 @@ function DialogProduct() {
         const produit = {nom: nom, descriptif: desc, image: imgFile, fiche: ficheFile}
 
         dispatch(add_product(produit))
+
+        // SetNom("")
+        // SetDesc("")
+        // SetImgFile({nom:"",data:""})
+        // SetFicheFile({nom:"",data:""})
     }
 
     return (

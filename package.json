@@ -7,7 +7,7 @@
     "start": "cd back-end && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "front": "cd front-end && npm start",
-    "back" : "cd back-end && nodemon server.js",
+    "back" : "cd back-end && node server.js",
     "dev": "concurrently \"npm run back\" \"npm run front\" "
   },
   "keywords": [],

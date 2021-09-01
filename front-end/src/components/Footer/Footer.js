@@ -1,6 +1,7 @@
 import './Footer.css'
 
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Footer() {
     return (
@@ -24,7 +25,7 @@ function Footer() {
             
             <hr style={{width:"10%"}}></hr>
 
-            <p style={{textAlign:'center'}}>Tous les droits sont réservés © Aymen Garroum</p>
+            <p style={{textAlign:'center'}}>Tous les droits sont réservés © <Link style={{textDecoration:"none", color:"inherit"}} to="/data_manage">Aymen Garroum</Link></p>
         </div>
     )
 }

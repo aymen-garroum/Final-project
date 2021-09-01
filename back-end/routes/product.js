@@ -24,8 +24,8 @@ router.post('/data_manage', async(req,res) => {
     }
 })
 
-router.delete('/data_manage/:productID', async(req,res) =>{
-    try{ const found_product = await Product.findByIdAndDelete(req.params.productID, (err,docs)=> {
+router.delete('/data_manage/:id', async(req,res) =>{
+    try{ const found_product = await Product.findByIdAndDelete(req.params.id, (err,docs)=> {
         if(docs){res.send("Produit supprimé avec succès")}
     })
     }

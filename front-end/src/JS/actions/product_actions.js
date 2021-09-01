@@ -1,4 +1,4 @@
-import { GET_PRODUCT, GET_PRODUCTS } from "../constants/action_types";
+import { GET_PRODUCTS } from "../constants/action_types";
 import axios from 'axios'
 
 
@@ -11,7 +11,14 @@ export const get_products = () => (dispatch) => {
 
 export const add_product = (produit) => (dispatch) => {
     axios.post("/data_manage", produit)
-        // .then(() => dispatch(get_products()))
         .then(res => console.log(res))
+        .then(() => dispatch(get_products()))
         .catch(err => console.log(err))       
+}
+
+export const delete_product = (id) => (dispatch) => {
+    axios.delete(`/data_manage/${id}`)
+        .then(res => console.log(res))
+        .then(() => dispatch(get_products()))
+        .catch(err => console.log(err))
 }
