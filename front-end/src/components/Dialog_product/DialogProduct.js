@@ -39,6 +39,8 @@ function DialogProduct() {
 
     const ajouter_produit = () =>{
 
+        // if(ficheFile.nom === ""){SetFicheFile({...ficheFile, nom: "empty"})}
+
         const produit = {nom: nom, descriptif: desc, image: imgFile, fiche: ficheFile}
 
         dispatch(add_product(produit))
@@ -59,7 +61,8 @@ function DialogProduct() {
 
             <div className="div_form_dialog">
                 <label>Description</label>
-                <input onChange={(e)=>{SetDesc(e.target.value)}} type="text"></input>
+                {/* <input onChange={(e)=>{SetDesc(e.target.value)}} type="text"></input> */}
+                <textarea rows="5" cols="19" onChange={(e)=>{SetDesc(e.target.value)}} type="text"></textarea>
             </div>
 
             <div className="div_form_dialog">

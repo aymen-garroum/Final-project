@@ -27,7 +27,7 @@ function Data_manage() {
 
                                             <img className="img_card" style={{width:"100%", height:"250px"}} src={el.image.data} alt="Can't access to path"/>
                                             <div className="footer_card">
-                                            <span className="product_name">{el.nom}</span>
+                                            <span className="product_name">{el.nom.toUpperCase()}</span>
                                             <div className="div_bouton_crud"><span id={el._id} onClick={e=> dispatch(delete_product(e.target.id))} className="bouton_crud">Supprimer</span><span className="bouton_crud">Modifier</span></div>
                                             </div>
                                             </div>})}

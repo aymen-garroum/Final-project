@@ -10,7 +10,7 @@ function Card(product) {
 
             <img className="img_card" style={{width:"100%", height:"250px"}} src={product.product.image.data} alt="Can't access to path"/>
             <div className="footer_card">
-                <span className="product_name">{product.product.nom}</span>
+                <span className="product_name">{product.product.nom.toUpperCase()}</span>
                 <Link to={`/produits/${product.product._id}`} className="button_info">Plus d'infos</Link>
             </div>
         </div>

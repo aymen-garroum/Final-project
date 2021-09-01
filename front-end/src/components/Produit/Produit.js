@@ -10,6 +10,12 @@ function Produit(props) {
 
     const produit = liste.find(el=> {return el._id === id})
 
+    const fiche = produit.fiche.nom
+
+    let afficher = true
+
+    if(fiche === ""){afficher = false}
+
     const open_pdf = (e) => {
         e.preventDefault()
         const win = window.open();
@@ -19,9 +25,9 @@ function Produit(props) {
     return (
         <div className="div_description">
             <img style={{width:"100%"}} src={produit.image.data} alt="Can't access to path"></img>
-            <h1 style={{color: "#6d747c"}}>PRODUIT : {produit.nom}</h1>
+            <h1 style={{color: "#6d747c"}}>PRODUIT : {produit.nom.toUpperCase()}</h1>
             <p className="desc_div_produit"><strong>Description et applications : </strong>{produit.descriptif}</p>
-            <p className="ft_div_produit"><strong>Fiche technique : </strong><a onClick={e=>{open_pdf(e)}} href={produit.fiche.data} rel="noopener noreferrer" type="application/pdf">{produit.fiche.nom}</a></p>
+            {afficher && <p className="ft_div_produit"><strong>Fiche technique : </strong><a onClick={e=>{open_pdf(e)}} href={produit.fiche.data} rel="noopener noreferrer" type="application/pdf">{produit.fiche.nom}</a></p>}
             
         </div>
     )
